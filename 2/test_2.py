@@ -17,7 +17,7 @@ def get(token):
     
 
 def createpost(token):
-    p = requests.post('https://test-stand.gb.ru/api/posts', headers={'X-Auth-Token': token}, data={ 'title':'Новый пост для тестирования',
+    p = requests.post('https://test-stand.gb.ru/gateway/posts', headers={'X-Auth-Token': token}, data={ 'title':'Новый пост для тестирования',
             'description':'Тестируем при помощи requests и pytest', 'content': 'Добавить в задание с REST API еще один тест, в котором создается новый пост,а потом проверяется его наличие на сервере по полю “описание”.'} )
     return p.json()
 
